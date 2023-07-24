@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #efefef;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1876f2;
+    padding: 5px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo{
+    width: 160px;
+    margin-right: 45px;
+}
+.nav-left ,.nav-right{
+    display: flex;
+    align-items: center;
+}
+nav h1{
+    color: white;
+}
+.nav-left ul li{
+    list-style: none;
+    display: inline-block;
+}
+.nav-left ul li img{
+    width: 28px;
+    margin: 0px 15px;
+}
+.usericon img{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.usericon{
+    margin-left: 30px;
+}
+.search-box{
+    background: #efefef;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+.search-box img{
+    width: 18px;
+}
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5%;
+}
+.left-sidebar{
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+}
+.right-sidebar{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    color: #626262;
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+}
+.center{
+    flex-basis: 47%;
+}
+.left-links a,.shortcut-links a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom:30px ;
+    color: #626262;
+    width: fit-content;
+}
+.left-links a img{
+    width: 25px;
+    margin-right: 15px;
+    
+}
+.left-links a:last-child{
+    color: #1876f2;
+
+}
+.left-links{
+    border-bottom: 2px solid #ccc;
+}
+.shortcut-links a img{
+    width: 50px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+.shortcut-links p{
+    margin: 25px 0;
+    color: #626262;
+    font-weight: 500;
+}
+.sidebar-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.sidebar-title h4{
+    font-weight:600;
+    font-size: 16px;
+}
+.sidebar-title a{
+    text-decoration: none;
+    color:#1876f2 ;
+    font-size: 12px;
+}
+.event{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.left-event{
+    border-radius: 10px;
+    height: 65px;
+    width: 65px;
+    margin-right: 15px;
+    padding-top: 10px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1) ;
+}
+.event p{
+    font-size: 12px;
+}
+.event a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #1876f2;
+}
+.left-event span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1876f2;
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 0;
+}
+.ads{
+     width: 100%;
+     margin-bottom:20px ;
+     border-radius: 4px;
+}
+.online-list{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.online-list .online img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.story-gallery{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.story{
+    flex-basis: 18%;
+    padding: 100px 75px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+}
+.story img{
+    position: absolute;
+    width: 45px;
+    border-radius: 50%;
+    top: 130px;
+    left: 55px;
+    border-radius: 5px solid #626262;
+}
+.story p{
+    position: absolute;
+    left: 4px;
+    bottom: 2px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+.story1{
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/Erling\ Braut\ Haaland\ as\ Cyborg\ Terminator\ digital\ illustration.jpg);
+}
+.story2{
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/Leo\ Messi\ ❤️_🔥.jpg);
+}
+.story3{
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/Neymar\ Jr.jpg);
+}
+.story4{
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.5)), url(images/download\ \(3\).jpg);
+}
+.post-div{
+    width: 100%;
+    background: white;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+}
+.user-pfp{
+    display: flex;
+    align-items: center;
+
+}
+.user-pfp img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-pfp p{
+    margin-bottom: -5px;
+    font-weight: 500;
+    color: #626262;
+}
+.user-pfp small{
+    font-size: 12px;
+}
+.user-pfp span{
+    font-size: 13px;
+    color: #9a9a9a;
+}
+.post-caption{
+    color: #9a9a9a;
+    margin: 15px 0;
+    font-size: 15px;
+}
+.post-img{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+.post-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icons div img{
+    width: 18px;
+    margin-right: 10px;
+}
+.icons div{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 30px;
+}
