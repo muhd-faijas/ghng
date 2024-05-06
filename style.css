@@ -1,0 +1,63 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #ffcccc; /* Romantic background color */
+    font-family: Arial, sans-serif; /* Use a common font for better readability */
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#proposal {
+    text-align: center;
+    color: white;
+}
+
+#buttons {
+    margin-top: 40px; /* Increased margin-top for more space between the text and buttons */
+}
+
+button {
+    padding: 12px 24px; /* Adjusted padding for both buttons */
+    margin: 0 10px; /* Added margin around the buttons */
+    border: none;
+    border-radius: 20px; /* Adjusted border-radius for both buttons */
+    background-color: #ff66cc; /* Pink color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3385; /* Lighter pink color on hover */
+}
+
+#celebration {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#celebration {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#noBtn {
+    position: absolute;
+}

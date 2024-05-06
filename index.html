@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bitch</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes fall {
+            0% { transform: translateY(-20px); }
+            100% { transform: translateY(calc(100vh + 20px)); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="proposal">
+            <div id="imageDiv" style="position: relative; width: 300px; height: 200px; overflow: hidden;">
+                <img src="WhatsApp Image 2024-05-06 at 15.05.06_8f39f0c7.jpg" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            
+            <h1>Will you marry me, Axi?</h1>
+            <div id="buttons">
+                <button id="yesBtn">Yes</button>
+                <button id="noBtn">No</button>
+            </div>
+        </div>
+        <div id="celebration">
+            <!-- Empty div to append hearts -->
+            <div id="imageDiv" style="position: relative; width: 300px; height: 200px; overflow: hidden; top: 50%; left: 50%;">
+                <img src="Romantic Couple Of Teddy Bears Kissing Romantic Couple Of Bears GIF - Romantic Couple Of Teddy Bears Kissing Romantic Couple Romantic Couple Of Bears - Discover & Share GIFs.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let noBtnClickCount = 0;
+
+            document.getElementById("noBtn").addEventListener("click", function () {
+                noBtnClickCount++;
+
+                if (noBtnClickCount === 2) {
+                    alert("Bij u dont love me??");
+                    noBtnClickCount = 0; // Reset the count after displaying the message
+                } else {
+                    let xPos = Math.random() * 70;
+                    let yPos = Math.random() * 70;
+                    document.getElementById("noBtn").style.left = xPos + "%";
+                    document.getElementById("noBtn").style.top = yPos + "%";
+                }
+            });
+
+            document.getElementById("yesBtn").addEventListener("click", function () {
+                document.getElementById("proposal").style.display = "none";
+                document.getElementById("celebration").style.display = "block";
+
+                // Add "u is bij" text to the celebration div
+                let textElement = document.createElement("h2");
+                textElement.textContent = "YOU IS BIJ";
+                textElement.style.position = "absolute";
+                textElement.style.top = "20%";
+                textElement.style.left = "50%";
+                textElement.style.transform = "translateX(-50%)";
+                textElement.style.color = "white";
+                document.getElementById("celebration").appendChild(textElement);
+
+                // Create and append hearts
+                for (let i = 0; i < 100; i++) {
+                    createHeart();
+                }
+            });
+        });
+
+        // Function to create hearts falling like rain
+        function createHeart() {
+            let colors = ['#ff6666', '#ff99cc', '#ffcc66', '#6699ff', '#66ff99']; // Array of heart colors
+            let color = colors[Math.floor(Math.random() * colors.length)]; // Random color from the array
+            let size = Math.random() * 30 + 10; // Random size between 10 and 40 pixels
+            let duration = Math.random() * 2 + 1; // Random duration between 1 and 3 seconds
+
+            let heart = document.createElement("div");
+            heart.innerHTML = "❤️"; // Heart emoji
+            heart.style.fontSize = size + "px";
+            heart.style.color = color;
+            heart.style.position = "absolute";
+            heart.style.top = "-20px"; // Start from top of the screen
+            heart.style.left = Math.random() * window.innerWidth + "px"; // Random horizontal position
+            heart.style.animation = `fall ${duration}s linear infinite`;
+
+            // Append heart to the celebration div
+            document.getElementById("celebration").appendChild(heart);
+
+            // Remove heart after it falls out of the screen to prevent memory leaks
+            setTimeout(() => {
+                heart.remove();
+            }, duration * 1000);
+        }
+    </script>
+</body>
+</html>
